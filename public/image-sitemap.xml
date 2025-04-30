@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://solveside.co.za/</loc>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/solveside-logo.png</image:loc>
+      <image:title>SolveSide Logo</image:title>
+      <image:caption>SolveSide - IT Solutions Provider in South Africa</image:caption>
+      <image:geo_location>Johannesburg, South Africa</image:geo_location>
+      <image:license>https://solveside.co.za/terms-of-service</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/solveside-og-image.png</image:loc>
+      <image:title>SolveSide Open Graph Image</image:title>
+      <image:caption>SolveSide - Leading IT Solutions Provider in South Africa</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/favicon.ico</image:loc>
+      <image:title>SolveSide Favicon</image:title>
+      <image:caption>SolveSide Website Icon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/apple-touch-icon.png</image:loc>
+      <image:title>SolveSide Apple Touch Icon</image:title>
+      <image:caption>SolveSide Mobile App Icon</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://solveside.co.za/#services</loc>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/services/automation-engineering.png</image:loc>
+      <image:title>Automation Engineering Services</image:title>
+      <image:caption>SolveSide Automation Engineering Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/services/quality-assurance.png</image:loc>
+      <image:title>Quality Assurance Services</image:title>
+      <image:caption>SolveSide Quality Assurance Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/services/digital-infrastructure.png</image:loc>
+      <image:title>Digital Infrastructure Services</image:title>
+      <image:caption>SolveSide Digital Infrastructure Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/services/ict-compliance.png</image:loc>
+      <image:title>ICT Compliance Services</image:title>
+      <image:caption>SolveSide ICT Compliance Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/services/devops-engineering.png</image:loc>
+      <image:title>DevOps Engineering Services</image:title>
+      <image:caption>SolveSide DevOps Engineering Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://solveside.co.za/images/services/managed-it.png</image:loc>
+      <image:title>Managed IT Services</image:title>
+      <image:caption>SolveSide Managed IT Solutions</image:caption>
+    </image:image>
+  </url>
+</urlset>

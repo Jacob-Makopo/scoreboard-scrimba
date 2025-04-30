@@ -1,0 +1,6 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="630" fill="#f8f9fa"/>
+  <text x="600" y="300" font-family="Arial" font-size="60" text-anchor="middle" fill="#009FE3">SolveSide</text>
+  <text x="600" y="380" font-family="Arial" font-size="30" text-anchor="middle" fill="#333333">IT Solutions Provider</text>
+</svg>

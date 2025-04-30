@@ -1,0 +1,45 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Specific instructions for Google
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+Allow: /images/
+
+# Specific instructions for Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Specific instructions for Bingbot
+User-agent: Bingbot
+Allow: /*.js$
+Allow: /*.css$
+Allow: /images/
+
+# Sitemap locations
+Sitemap: https://solveside.co.za/sitemap-index.xml
+Sitemap: https://solveside.co.za/sitemap.xml
+Sitemap: https://solveside.co.za/google-sitemap.xml
+Sitemap: https://solveside.co.za/image-sitemap.xml
+Sitemap: https://solveside.co.za/news-sitemap.xml
+Sitemap: https://solveside.co.za/hreflang-sitemap.xml
+
+# Prevent crawling of certain files
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+
+# Crawl delay for specific bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
