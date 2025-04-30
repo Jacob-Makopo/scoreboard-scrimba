@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect } from "react"
 import Script from "next/script"
 import { Navbar } from "@/components/navbar"
@@ -31,9 +33,7 @@ export default function PrivacyPolicy() {
       <main className="flex-1 px-6 py-16">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-              Privacy Policy
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">Privacy Policy</h1>
             <p className="text-base md:text-lg text-gray-600">
               Effective Date: 29 April 2025 <br />
               Jurisdiction: Republic of South Africa <br />
@@ -42,15 +42,15 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="space-y-10 text-base md:text-lg leading-relaxed bg-white rounded-2xl shadow-lg p-8">
-            {[{
+            {[
+              {
                 title: "1. Introduction",
                 content:
-                  "SolveSide (\"we,\" \"us,\" \"our\") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal data when you access or use our Services.",
+                  'SolveSide ("we," "us," "our") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal data when you access or use our Services.',
               },
               {
                 title: "2. Information We Collect",
-                content:
-                  "We collect personal data in the course of providing our Services. This may include:",
+                content: "We collect personal data in the course of providing our Services. This may include:",
                 list: [
                   "Contact Information: Name, email address, phone number, and billing information.",
                   "Usage Data: Information on how you use our Services, including device information, IP addresses, browser type, and interaction data.",
@@ -59,8 +59,7 @@ export default function PrivacyPolicy() {
               },
               {
                 title: "3. How We Use Your Information",
-                content:
-                  "We use the information we collect to:",
+                content: "We use the information we collect to:",
                 list: [
                   "Provide, maintain, and improve our Services.",
                   "Communicate with you about your use of our Services and respond to inquiries.",
@@ -88,8 +87,7 @@ export default function PrivacyPolicy() {
               },
               {
                 title: "7. Your Rights",
-                content:
-                  "Under applicable data protection laws, you have the right to:",
+                content: "Under applicable data protection laws, you have the right to:",
                 list: [
                   "Access, update, or delete your personal data.",
                   "Request a copy of your personal data in a portable format.",
@@ -105,7 +103,7 @@ export default function PrivacyPolicy() {
               {
                 title: "9. Changes to This Privacy Policy",
                 content:
-                  "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated \"Effective Date.\" We encourage you to review this Privacy Policy periodically to stay informed about how we protect your data.",
+                  'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Effective Date." We encourage you to review this Privacy Policy periodically to stay informed about how we protect your data.',
               },
               {
                 title: "10. Contact Us",
