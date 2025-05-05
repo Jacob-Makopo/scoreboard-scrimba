@@ -3,8 +3,11 @@
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import Image from "next/image"
+import { useSmartScroll } from "@/lib/useSmartScroll"
 
 export function Footer() {
+  const goTo = useSmartScroll()
+
   return (
     <footer className="w-full border-t bg-gradient-to-b from-white to-offWhite">
       <div className="container flex flex-col gap-10 px-4 py-10 md:px-6 md:py-16">
@@ -45,29 +48,29 @@ export function Footer() {
             <h3 className="text-base font-medium text-brightBlue">Services</h3>
             <ul className="grid gap-2 text-sm">
               <li>
-                <Link href="#services" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("services")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   Automation Engineering
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#services" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("services")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   Quality Assurance & Testing
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#services" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("services")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   Digital Infrastructure
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#services" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("services")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   ICT Compliance
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#services" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("services")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   DevOps Engineering
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -75,43 +78,29 @@ export function Footer() {
             <h3 className="text-base font-medium text-brightBlue">Company</h3>
             <ul className="grid gap-2 text-sm">
               <li>
-                <Link href="#about" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("about")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#faq" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("faq")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   FAQ
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-gray-600 hover:text-brightBlue transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    alert("Careers page coming soon!")
-                  }}
-                >
+                <Link href="#" className="text-gray-600 hover:text-brightBlue transition-colors" onClick={(e) => { e.preventDefault(); alert("Careers page coming soon!") }}>
                   Careers
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-gray-600 hover:text-brightBlue transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    alert("Blog coming soon!")
-                  }}
-                >
+                <Link href="#" className="text-gray-600 hover:text-brightBlue transition-colors" onClick={(e) => { e.preventDefault(); alert("Blog coming soon!") }}>
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-600 hover:text-brightBlue transition-colors" scroll={false}>
+                <button onClick={() => goTo("contact")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   Contact
-                </Link>
+                </button>
               </li>
               <li>
                 <Link href="/privacy-policy" className="text-gray-600 hover:text-brightBlue transition-colors">
