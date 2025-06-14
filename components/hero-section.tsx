@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, Brain, Code, CheckCircle, Network, Server } from "lucide-react"
+import { ArrowRight, Brain, Code, Network, Server } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { HexagonPattern } from "@/components/hexagon-pattern"
@@ -108,16 +108,16 @@ export function HeroSection() {
                             <div className="h-8 w-8 md:h-12 md:w-12 rounded-full bg-brightBlue/10 flex items-center justify-center mb-2">
                               <Code className="h-4 w-4 md:h-6 md:w-6 text-brightBlue" />
                             </div>
-                            <span className="text-xs md:text-sm font-medium">Automation</span>
+                            <span className="text-xs md:text-sm font-medium">Automation & QA</span>
                           </div>
                           <div
                             className="flex flex-col items-center justify-center p-2 md:p-4 glass-effect rounded-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
                             style={{ transitionDelay: "0.1s" }}
                           >
                             <div className="h-8 w-8 md:h-12 md:w-12 rounded-full bg-brightBlue/10 flex items-center justify-center mb-2">
-                              <CheckCircle className="h-4 w-4 md:h-6 md:w-6 text-brightBlue" />
+                              <Code className="h-4 w-4 md:h-6 md:w-6 text-brightBlue" />
                             </div>
-                            <span className="text-xs md:text-sm font-medium">QA Testing</span>
+                            <span className="text-xs md:text-sm font-medium">Web & Software Dev</span>
                           </div>
                           <div
                             className="flex flex-col items-center justify-center p-2 md:p-4 glass-effect rounded-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
@@ -135,7 +135,7 @@ export function HeroSection() {
                             <div className="h-8 w-8 md:h-12 md:w-12 rounded-full bg-brightBlue/10 flex items-center justify-center mb-2">
                               <Server className="h-4 w-4 md:h-6 md:w-6 text-brightBlue" />
                             </div>
-                            <span className="text-xs md:text-sm font-medium">DevOps</span>
+                            <span className="text-xs md:text-sm font-medium">DevOps & Hosting</span>
                           </div>
                         </div>
                       </div>

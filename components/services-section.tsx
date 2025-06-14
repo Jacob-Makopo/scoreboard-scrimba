@@ -46,14 +46,14 @@ export function ServicesSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
-          {/* Service Cards with hover effects and animations */}
+          {/* Combined Automation & QA Service Card */}
           <Card className="border-brightBlue/10 glass-effect shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
             <CardHeader className="pb-2">
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-brightBlue text-white">
                 <Code className="h-6 w-6" />
               </div>
-              <CardTitle className="text-brightBlue">Automation Engineering</CardTitle>
-              <CardDescription>Streamline operations and reduce manual tasks</CardDescription>
+              <CardTitle className="text-brightBlue">Automation & Quality Assurance</CardTitle>
+              <CardDescription>Streamline operations and ensure flawless performance</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="grid gap-2 text-sm">
@@ -67,47 +67,51 @@ export function ServicesSection() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Custom automation solutions</span>
+                  <span>Automated testing frameworks</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Workflow optimization</span>
+                  <span>Performance & security testing</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
+
+          {/* Web Development & Software Development */}
           <Card
             className="border-brightBlue/10 glass-effect shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
             style={{ transitionDelay: "0.1s" }}
           >
             <CardHeader className="pb-2">
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-brightBlue text-white">
-                <CheckCircle className="h-6 w-6" />
+                <Code className="h-6 w-6" />
               </div>
-              <CardTitle className="text-brightBlue">Quality Assurance & Testing</CardTitle>
-              <CardDescription>Ensure flawless software performance</CardDescription>
+              <CardTitle className="text-brightBlue">Web & Software Development</CardTitle>
+              <CardDescription>Custom applications and digital solutions</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="grid gap-2 text-sm">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Automated testing frameworks</span>
+                  <span>Custom web applications</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Performance testing</span>
+                  <span>Mobile app development</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Security testing</span>
+                  <span>E-commerce solutions</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>QA process implementation</span>
+                  <span>API development & integration</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
+
+          {/* Digital Infrastructure & Networking */}
           <Card
             className="border-brightBlue/10 glass-effect shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
             style={{ transitionDelay: "0.2s" }}
@@ -140,6 +144,8 @@ export function ServicesSection() {
               </ul>
             </CardContent>
           </Card>
+
+          {/* ICT Infrastructure & Compliance */}
           <Card className="border-brightBlue/10 glass-effect shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
             <CardHeader className="pb-2">
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-brightBlue text-white">
@@ -169,6 +175,8 @@ export function ServicesSection() {
               </ul>
             </CardContent>
           </Card>
+
+          {/* DevOps Engineering */}
           <Card
             className="border-brightBlue/10 glass-effect shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
             style={{ transitionDelay: "0.1s" }}
@@ -201,6 +209,8 @@ export function ServicesSection() {
               </ul>
             </CardContent>
           </Card>
+
+          {/* Hosting & Maintenance */}
           <Card
             className="border-brightBlue/10 glass-effect shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
             style={{ transitionDelay: "0.2s" }}
@@ -209,26 +219,26 @@ export function ServicesSection() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-brightBlue text-white">
                 <Database className="h-6 w-6" />
               </div>
-              <CardTitle className="text-brightBlue">Managed IT Services</CardTitle>
-              <CardDescription>Ongoing support and maintenance</CardDescription>
+              <CardTitle className="text-brightBlue">Hosting & Maintenance</CardTitle>
+              <CardDescription>Reliable hosting and ongoing support</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="grid gap-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-brightBlue" />
+                  <span>Web hosting & cloud services</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
                   <span>24/7 system monitoring</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Proactive maintenance</span>
+                  <span>Regular backups & updates</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>Help desk & technical support</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-brightBlue" />
-                  <span>System updates & patching</span>
+                  <span>Technical support & maintenance</span>
                 </li>
               </ul>
             </CardContent>

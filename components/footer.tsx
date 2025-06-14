@@ -63,11 +63,12 @@ export function Footer() {
             <h3 className="text-base font-medium text-brightBlue">Services</h3>
             <ul className="grid gap-2 text-sm">
               {[
-                "Automation Engineering",
-                "Quality Assurance & Testing",
+                "Automation & Quality Assurance",
+                "Web & Software Development",
                 "Digital Infrastructure",
                 "ICT Compliance",
-                "DevOps Engineering"
+                "DevOps Engineering",
+                "Hosting & Maintenance",
               ].map((service, idx) => (
                 <li key={idx}>
                   <button
@@ -86,12 +87,18 @@ export function Footer() {
             <h3 className="text-base font-medium text-brightBlue">Company</h3>
             <ul className="grid gap-2 text-sm">
               <li>
-                <button onClick={() => goTo("about")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
+                <button
+                  onClick={() => goTo("about")}
+                  className="text-left text-gray-600 hover:text-brightBlue transition-colors"
+                >
                   About Us
                 </button>
               </li>
               <li>
-                <button onClick={() => goTo("faq")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
+                <button
+                  onClick={() => goTo("faq")}
+                  className="text-left text-gray-600 hover:text-brightBlue transition-colors"
+                >
                   FAQ
                 </button>
               </li>
@@ -112,7 +119,10 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <button onClick={() => goTo("contact")} className="text-left text-gray-600 hover:text-brightBlue transition-colors">
+                <button
+                  onClick={() => goTo("contact")}
+                  className="text-left text-gray-600 hover:text-brightBlue transition-colors"
+                >
                   Contact
                 </button>
               </li>
