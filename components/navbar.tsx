@@ -41,6 +41,14 @@ export function Navbar() {
 
         <nav className="hidden md:flex items-center gap-6">
           <Link
+            href="/"
+            className={`text-sm font-medium hover:text-brightBlue transition-colors ${
+              pathname === "/" ? "text-brightBlue" : ""
+            }`}
+          >
+            Home
+          </Link>
+          <Link
             href="/services"
             className={`text-sm font-medium hover:text-brightBlue transition-colors ${
               pathname === "/services" ? "text-brightBlue" : ""
@@ -86,21 +94,35 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="border-l-brightBlue/20 w-[80%] sm:w-[350px]">
             <div className="flex justify-between items-center mb-6">
-              <Image
-                src="/images/solveside-logo.png"
-                alt="SolveSide Logo"
-                width={100}
-                height={40}
-                className="h-8 w-auto"
-              />
+              <SheetClose asChild>
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/images/solveside-logo.png"
+                    alt="SolveSide Logo"
+                    width={100}
+                    height={40}
+                    className="h-8 w-auto"
+                  />
+                </Link>
+              </SheetClose>
               <SheetClose asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
-                  <X className="h-5 w-5" />
+                  
                   <span className="sr-only">Close menu</span>
                 </Button>
               </SheetClose>
             </div>
             <div className="flex flex-col gap-6 pt-4">
+              <SheetClose asChild>
+                <Link
+                  href="/"
+                  className={`text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left ${
+                    pathname === "/" ? "text-brightBlue" : ""
+                  }`}
+                >
+                  Home
+                </Link>
+              </SheetClose>
               <SheetClose asChild>
                 <Link
                   href="/services"
