@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
@@ -11,7 +11,6 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
 
   useEffect(() => {
@@ -21,20 +20,6 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const goTo = (id: string) => {
-    if (pathname === "/") {
-      const el = document.getElementById(id)
-      if (el) el.scrollIntoView({ behavior: "smooth" })
-    } else {
-      router.push(`/#${id}`)
-    }
-  }
-
-  const handleLinkClick = (id: string) => {
-    setIsOpen(false)
-    goTo(id)
-  }
 
   return (
     <header
@@ -55,29 +40,46 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          <button onClick={() => goTo("services")} className="text-sm font-medium hover:text-brightBlue transition-colors">
-            Services
-          </button>
-          <button onClick={() => goTo("about")} className="text-sm font-medium hover:text-brightBlue transition-colors">
-            About
-          </button>
-          <button onClick={() => goTo("faq")} className="text-sm font-medium hover:text-brightBlue transition-colors">
-            FAQ
-          </button>
-          <button onClick={() => goTo("contact")} className="text-sm font-medium hover:text-brightBlue transition-colors">
-            Contact
-          </button>
-          <Button
-            className="bg-brightBlue hover:bg-brightBlue/90 text-white"
-            onClick={() => goTo("contact")}
+          <Link
+            href="/services"
+            className={`text-sm font-medium hover:text-brightBlue transition-colors ${
+              pathname === "/services" ? "text-brightBlue" : ""
+            }`}
           >
-            Get Started
+            Services
+          </Link>
+          <Link
+            href="/about"
+            className={`text-sm font-medium hover:text-brightBlue transition-colors ${
+              pathname === "/about" ? "text-brightBlue" : ""
+            }`}
+          >
+            About
+          </Link>
+          <Link
+            href="/faq"
+            className={`text-sm font-medium hover:text-brightBlue transition-colors ${
+              pathname === "/faq" ? "text-brightBlue" : ""
+            }`}
+          >
+            FAQ
+          </Link>
+          <Link
+            href="/contact"
+            className={`text-sm font-medium hover:text-brightBlue transition-colors ${
+              pathname === "/contact" ? "text-brightBlue" : ""
+            }`}
+          >
+            Contact
+          </Link>
+          <Button className="bg-brightBlue hover:bg-brightBlue/90 text-white" asChild>
+            <Link href="/contact">Get Started</Link>
           </Button>
         </nav>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon" className="border-brightBlue/20">
+            <Button variant="outline" size="icon" className="border-brightBlue/20 bg-transparent">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -100,43 +102,48 @@ export function Navbar() {
             </div>
             <div className="flex flex-col gap-6 pt-4">
               <SheetClose asChild>
-                <button
-                  onClick={() => handleLinkClick("services")}
-                  className="text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left"
+                <Link
+                  href="/services"
+                  className={`text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left ${
+                    pathname === "/services" ? "text-brightBlue" : ""
+                  }`}
                 >
                   Services
-                </button>
+                </Link>
               </SheetClose>
               <SheetClose asChild>
-                <button
-                  onClick={() => handleLinkClick("about")}
-                  className="text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left"
+                <Link
+                  href="/about"
+                  className={`text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left ${
+                    pathname === "/about" ? "text-brightBlue" : ""
+                  }`}
                 >
                   About
-                </button>
+                </Link>
               </SheetClose>
               <SheetClose asChild>
-                <button
-                  onClick={() => handleLinkClick("faq")}
-                  className="text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left"
+                <Link
+                  href="/faq"
+                  className={`text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left ${
+                    pathname === "/faq" ? "text-brightBlue" : ""
+                  }`}
                 >
                   FAQ
-                </button>
+                </Link>
               </SheetClose>
               <SheetClose asChild>
-                <button
-                  onClick={() => handleLinkClick("contact")}
-                  className="text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left"
+                <Link
+                  href="/contact"
+                  className={`text-lg font-medium hover:text-brightBlue transition-colors py-2 border-b border-gray-100 text-left ${
+                    pathname === "/contact" ? "text-brightBlue" : ""
+                  }`}
                 >
                   Contact
-                </button>
+                </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Button
-                  className="bg-brightBlue hover:bg-brightBlue/90 text-white w-full mt-4"
-                  onClick={() => handleLinkClick("contact")}
-                >
-                  Get Started
+                <Button className="bg-brightBlue hover:bg-brightBlue/90 text-white w-full mt-4" asChild>
+                  <Link href="/contact">Get Started</Link>
                 </Button>
               </SheetClose>
             </div>

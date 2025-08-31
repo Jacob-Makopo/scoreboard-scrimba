@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
 import Script from "next/script"
 
 const inter = Inter({
@@ -168,6 +169,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
+          <Toaster />
         </ThemeProvider>
 
         {/* Structured data for organization */}
@@ -329,25 +331,25 @@ export default function RootLayout({
                   "@type": "ListItem",
                   position: 2,
                   name: "Services",
-                  item: "https://solveside.co.za/#services",
+                  item: "https://solveside.co.za/services",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "About",
-                  item: "https://solveside.co.za/#about",
+                  item: "https://solveside.co.za/about",
                 },
                 {
                   "@type": "ListItem",
                   position: 4,
                   name: "FAQ",
-                  item: "https://solveside.co.za/#faq",
+                  item: "https://solveside.co.za/faq",
                 },
                 {
                   "@type": "ListItem",
                   position: 5,
                   name: "Contact",
-                  item: "https://solveside.co.za/#contact",
+                  item: "https://solveside.co.za/contact",
                 },
               ],
             }),

@@ -2,10 +2,9 @@
 
 import { useEffect } from "react"
 import { HeroSection } from "@/components/hero-section"
-import { ServicesSection } from "@/components/services-section"
-import { AboutSection } from "@/components/about-section"
-import { FAQSection } from "@/components/faq-section"
-import { ContactSection } from "@/components/contact-section"
+import { FeaturesSection } from "@/components/features-section"
+import { StatsSection } from "@/components/stats-section"
+import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
 import Script from "next/script"
@@ -44,10 +43,9 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <FAQSection />
-        <ContactSection />
+        <FeaturesSection />
+        <StatsSection />
+        <CTASection />
       </main>
       <Footer />
 

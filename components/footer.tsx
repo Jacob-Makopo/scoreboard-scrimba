@@ -1,25 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { useRouter, usePathname } from "next/navigation"
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
-  const router = useRouter()
-  const pathname = usePathname()
-
-  const goTo = (id: string) => {
-    if (pathname === "/") {
-      const el = document.getElementById(id)
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" })
-      }
-    } else {
-      router.push(`/#${id}`)
-    }
-  }
-
   return (
     <footer className="w-full border-t bg-gradient-to-b from-white to-offWhite">
       <div className="container flex flex-col gap-10 px-4 py-10 md:px-6 md:py-16">
@@ -71,12 +56,9 @@ export function Footer() {
                 "Hosting & Maintenance",
               ].map((service, idx) => (
                 <li key={idx}>
-                  <button
-                    onClick={() => goTo("services")}
-                    className="text-left text-gray-600 hover:text-brightBlue transition-colors"
-                  >
+                  <Link href="/services" className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                     {service}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -87,20 +69,14 @@ export function Footer() {
             <h3 className="text-base font-medium text-brightBlue">Company</h3>
             <ul className="grid gap-2 text-sm">
               <li>
-                <button
-                  onClick={() => goTo("about")}
-                  className="text-left text-gray-600 hover:text-brightBlue transition-colors"
-                >
+                <Link href="/about" className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => goTo("faq")}
-                  className="text-left text-gray-600 hover:text-brightBlue transition-colors"
-                >
+                <Link href="/faq" className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   FAQ
-                </button>
+                </Link>
               </li>
               <li>
                 <button
@@ -119,12 +95,9 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => goTo("contact")}
-                  className="text-left text-gray-600 hover:text-brightBlue transition-colors"
-                >
+                <Link href="/contact" className="text-left text-gray-600 hover:text-brightBlue transition-colors">
                   Contact
-                </button>
+                </Link>
               </li>
               <li>
                 <Link href="/privacy-policy" className="text-gray-600 hover:text-brightBlue transition-colors">
